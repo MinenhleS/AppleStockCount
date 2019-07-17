@@ -1,4 +1,3 @@
-
 public class AppleStockCount {
   public static void main(String[] args) {
 
@@ -25,8 +24,9 @@ public class AppleStockCount {
     else {
 	
 	total = qty * cost;
+	int dev = qty % 12;
 
-	if (qty >= 12) {
+	if (dev == 0) {
 
 	dosen = qty / 12;
 
@@ -37,7 +37,7 @@ public class AppleStockCount {
       StringBuilder message = new StringBuilder();
       message.append("You have bought ");
 
-	if(dosen < 1){
+	if(dev != 0){
 	message.append(qty);
 	
       message.append(" of");	
